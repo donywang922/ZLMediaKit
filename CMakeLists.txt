@@ -34,7 +34,7 @@ project(ZLMediaKit LANGUAGES C CXX)
 set(CMAKE_CXX_STANDARD 11)
 
 option(ENABLE_API "Enable C API SDK" ON)
-option(ENABLE_API_STATIC_LIB "Enable mk_api static lib" ON)
+option(ENABLE_API_STATIC_LIB "Enable mk_api static lib" OFF)
 option(ENABLE_ASAN "Enable Address Sanitize" OFF)
 option(ENABLE_CXX_API "Enable C++ API SDK" OFF)
 option(ENABLE_FAAC "Enable FAAC" OFF)
