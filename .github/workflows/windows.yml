@@ -19,18 +19,14 @@ jobs:
           vcpkgTriplet: x64-windows-static
           # 2024.06.01
           vcpkgGitCommitId: '47364fbc300756f64f7876b549d9422d5f3ec0d3'
-          vcpkgArguments: 'openssl libsrtp[openssl] usrsctp ffmpeg'
+          vcpkgArguments: 'openssl libsrtp[openssl] usrsctp ffmpeg[all]'
 
       - name: 编译
         uses: lukka/run-cmake@v3
         with:
           useVcpkgToolchainFile: true
           buildDirectory: '${{github.workspace}}/build'
-          cmakeAppendedArgs: >-
-            -DENABLE_API_STATIC_LIB=ON
-            -DENABLE_FFMPEG=ON
-            -DENABLE_PLAYER=ON
-            -DENABLE_SERVER=ON
+          cmakeAppendedArgs: ''
           cmakeBuildType: 'Release'
 
       - name: 设置环境变量
